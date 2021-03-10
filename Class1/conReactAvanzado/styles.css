@@ -1,0 +1,25 @@
+img {
+    box-shadow: 0 0 15px #999;
+    border-radius: 50%;
+    width: 100%;
+}
+
+picture {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+}
+
+picture.is-small {
+    width: 50px;
+}
+
+picture.is-large {
+    width: 200px;
+}
+
+img.disabled {
+    opacity: 0.3;
+
+}
