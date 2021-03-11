@@ -18,7 +18,7 @@ export default function ListOfGifs ({ params }) {
       })
     }, [keyword] )
 
-    if (loading) return <i>Loading...  emojis</i>
+    if (loading) return <i>Loading content...</i>
 
     return <div>
         {
