@@ -9,8 +9,8 @@ export default function SearchResult({ params }) {
 
     return <>
         {loading 
-        ? <Spinner /> 
-        : <ListOfGifs gifs={gifs} />
+            ? <Spinner /> 
+            : <ListOfGifs gifs={gifs} />
         }
     </>
 }

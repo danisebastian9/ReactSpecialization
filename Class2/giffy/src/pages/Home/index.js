@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import { Link, useLocation } from "wouter"
+import getGifs from "../../services/getGifs"
+import ListOfGifs from "../../components/ListOfGifs"
+import {useGifs} from "../../hooks/useGifs"
 
 
 const POPULAR_GIFS = ["Pandas", "Development", "Colombia", "Movies", "Technology"]
@@ -7,6 +10,8 @@ const POPULAR_GIFS = ["Pandas", "Development", "Colombia", "Movies", "Technology
 export default function Home() {
     const [keyword, setKeyword] = useState("")
     const [path, pushLocation] = useLocation()
+
+    const {loading, gifs} = useGifs()
 
     const handleSubmit = event => {
         event.preventDefault()
