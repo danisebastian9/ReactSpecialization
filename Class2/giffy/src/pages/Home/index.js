@@ -10,7 +10,6 @@ const POPULAR_GIFS = ["Pandas", "Development", "Colombia", "Movies", "Technology
 export default function Home() {
     const [keyword, setKeyword] = useState("")
     const [path, pushLocation] = useLocation()
-
     const {loading, gifs} = useGifs()
 
     const handleSubmit = event => {
@@ -26,7 +25,10 @@ export default function Home() {
         <>
             <form onSubmit={handleSubmit}>
                 <input placeholder="Search a Gif here..." onChange={handleChange} type="text" value={keyword} />
+                <button className="btn">Buscar</button>
             </form>
+            <h3 className="App-title">Ultima busqueda</h3>
+            <ListOfGifs gifs={gifs} />
             <h3 className="App-title">Los Gifs más populares</h3>
             <ul>
                 {POPULAR_GIFS.map((popularGif) => (

@@ -3,10 +3,10 @@
 
 }
 
-.ListOfGifs {
+/* .ListOfGifs {
   column-count: var(--results-columns);
   column-gap: .5em;
-}
+} */
 
 .ListOfGifs-item {
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
